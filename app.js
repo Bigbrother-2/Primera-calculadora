@@ -78,6 +78,7 @@ clickBoton.forEach(boton => {
         } else if (valorBoton === "=") {
             const num1 = parseFloat(primerNumero);
             const num2 = parseFloat(segundoNumero);
+            
 
             switch (operadorSeleccionado) {
                 case '+':
