@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes importadas URL */
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap');
+/* 
+    Fuentes importadas:
+
+    1_Edu Australia VIC WA NT Hand Dots{
+    font-family: "Edu AU VIC WA NT Dots", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    }
+
+
+
+*/
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./assets/black-and-white-math-board-zb383dm6tubx3bk2.jpg);
+    /* object-fit: cover; */
+    background-size: contain;
+    
+}
+
+.tituloh1{
+    margin-top: 1em;
+    font-family: "Edu AU VIC WA NT Dots", arial;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+
+.contenedorPadre{
+    margin-top: 2em;
+    width: 27%;
+    height: auto;
+    background-color: rgba(65, 65, 65, 0.932);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    margin-bottom: 2em;
+    max-width: 450px;
+}
+
+.redesSocialesArriba{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.redesSociales{
+    margin: 1em 0;
+}
+
+.redesSociales a{
+    text-decoration: none;
+    color: black;
+    color: rgb(179, 179, 179);
+}
+
+
+/* Contenedor de la pantalla donde muestra los numeros */
+
+.pantallaVisible{
+    width: 90%;
+    height: 100px;
+    background-color: rgba(48, 53, 45, 0.932);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items:end;
+    padding-right: 15px;
+    padding-top: 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.numerosResultado{
+    width: 100%;
+    height: 50%;
+    text-align: end;
+    font-size: 30px ;
+    color: aliceblue;
+
+}
+
+.numerosOperando{
+    width: 100%;
+    height: 50%;
+    text-align: end;
+    align-content:end;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+/* Contenedor de los numeros y simbolos */
+
+.gridContenedor{
+    margin: 1.5em;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    height: auto;
+    gap: 1px;
+    
+}
+
+.contenedorFlex{
+    /* border:1px solid black; */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    margin: auto auto;
+    border-radius: 50%;
+    background-color: rgba(91, 92, 92, 0.945);
+}
+
+.contenedorFlex p{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.contenedorFlex p.verde{
+    color:rgb(7, 192, 130);
+}
+
+.contenedorFlex p#cleaner{
+    color: rgb(238, 35, 62);
+}
+
+.contenedorFlex p.igual{
+    background-color: rgb(7, 192, 130);
+    color: white;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+/* Footer calculadora */
+.footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer a{
+    margin-bottom: 3%;
+    text-decoration: none;
+    color: rgb(179, 179, 179);
+}
+
+
+/* MEDIA QUERERISSSSS */
+@media only screen and (max-width:1444px){
+    .contenedorPadre{
+        width: 350px;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    /* parte de arriba */
+    .tituloh1{
+        font-size: 20px;
+    }
+    .redesSociales a{
+        font-size: 13px;
+
+    }
+    /* contenedor de la calculadora */
+    .contenedorPadre{
+        width: 35%;
+    }
+    .contenedorFlex{
+        width: 55px;
+        height: 55px;
+        margin-bottom: 5px;
+    }
+    /* contenedor de los circulos donde se ubican los numeros */
+
+    .gridContenedor{
+        gap:0; 
+    }
+    .numerosOperando{
+        font-size: 20px;
+    }
+    .numerosResultado{
+        font-size: 25px;
+    }
+    
+}
+
+@media only screen and (max-width: 425px){
+    /* parte de arriba */
+    .tituloh1{
+        font-size: 13px;
+    }
+
+    /* contenedor de la calculadora */
+    .contenedorPadre{
+        width: 70%;
+    }
+    .redesSociales a{
+        font-size: 13px;
+    }
+    .contenedorFlex{
+        width: 55px;
+        height: 55px;
+        margin-bottom: 5px;
+    }
+
+    /* contenido dentro de la pantalla */
+    .numerosPantalla{
+        font-size: 13px ;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    /* parte de arriba */
+    .tituloh1{
+        font-size: 10px;
+    }
+
+    /* contenedor de la calculadora */
+    .contenedorPadre{
+        width: 90%;
+    }
+    .pantallaVisible{
+        width: 90%;
+        height: 80px;
+    }
+    .contenedorFlex{
+        width: 60px;
+        height: 60px;
+    }
+    .redesSociales a{
+        font-size: 10px;
+    }
+    .footer a{
+        font-size: 10px;
+    }
+    
+    /* contenido dentro de la pantalla */
+    .numerosPantalla{
+        font-size:10px ;
+    }
+
+}
+
